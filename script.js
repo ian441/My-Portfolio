@@ -154,3 +154,24 @@ document.addEventListener('DOMContentLoaded', function() {
         likeCount.textContent = currentLikes;
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    menuToggle.addEventListener('click', function() {
+        nav.classList.add('active');
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        nav.classList.remove('active');
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+        });
+    });
+});

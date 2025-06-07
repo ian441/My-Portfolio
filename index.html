@@ -10,18 +10,22 @@
 <body>
     <header>
         <a href="#" class="logo">Ian.ma</a>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <div class="close-btn" id="close-menu">×</div>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <section id="home">
       <div class="home-img">
-         <img src="images/IMG_20240716_192934_078.jpg" alt="img">
+         <img src="images/IMG_20240716_192934_078.jpg" alt="Profile image">
      </div>
      <div class="home-content">
        <h1>Hi,<span> meet Ian</span> </h1>
@@ -32,62 +36,54 @@
        </p>
        <div class="like-container">
           <button class="like-btn" id="likeBtn">
-            <i class=" far fa-heart"></i>
+            <i class="far fa-heart"></i>
             <span class="like-count" id="likeCount">0</span>
           </button>
-
        </div>
      </div>
-</section>
+    </section>
 
     <section id="about">
         <div class="container">
             <h2 class="section-title">About <span> Me </span></h2>
              <div class="about-content">
                 <div class="about-image">
-                    <img src="images/IMG_20240408_222653_564.jpg">
+                    <img src="images/IMG_20240408_222653_564.jpg" alt="About me image">
                 </div>
                 <div class="about-tabs">
-
                     <div class="tabs">
                         <button class="tab-btn active" data-tab="skills">Skills</button>
                         <button class="tab-btn" data-tab="experience">Experience</button>
                         <button class="tab-btn" data-tab="education">Education</button>
-
                     </div>
-                  <div class="tab-content" id="skills">
+                  <div class="tab-content active" id="skills">
                     <div class="skills-container">
                         <div class="skills-category">
-                            <h3>HTML</h3>
+                            <h3>Frontend</h3>
                             <ul>
-                                <li>HMTL5, CSS, Javascript</li>
-                                <li>React.js, </li>
+                                <li>HTML5, CSS, JavaScript</li>
+                                <li>React.js</li>
                                 <li>Responsive Design</li>
-                                <li>UI/UX Principals</li>
-
+                                <li>UI/UX Principles</li>
                             </ul>
                         </div>
                          <div class="skills-category">
                             <h3>Backend</h3>
                             <ul>
                                 <li>Node.js, Express</li>
-                                <li>Python </li>
+                                <li>Python</li>
                                 <li>RESTful APIs</li>
                                 <li>Database Design</li>
-
                             </ul>
-
                          </div>
                          <div class="skills-category">
                             <h3>Tools</h3>
                             <ul>
                                 <li>Git, GitHub</li>
-                                <li>VS code</li>
+                                <li>VS Code</li>
                                 <li>Figma</li>
                                 <li>Webpack</li>
-
                             </ul>
-
                          </div>
                     </div>
                   </div>
@@ -112,11 +108,8 @@
                                 Assisted in building client websites using HTML, CSS, and JavaScript. 
                                 Participated in code reviews and learned agile development methodologies.
                             </p>
-
                         </div>
-
                     </div>
-
                   </div>
 
                   <div class="tab-content" id="education">
@@ -127,7 +120,6 @@
                             <span class="date">2019 - 2022</span>
                             <p>
                                 Completed high school education with a focus on information technology.
-
                             </p>
                         </div>
                         <div class="timeline-item">
@@ -138,14 +130,10 @@
                                 Intensive 12-week program focused on full-stack JavaScript development 
                                 including Node.js, Express, and MongoDB.
                             </p>
-                             
                         </div>
-
                     </div>
-
                   </div>
                 </div>
-
              </div>
         </div>
     </section>
@@ -155,10 +143,10 @@
         <div class="services-container">
             <div class="services-box">
                 <i class="fa-solid fa-laptop-code"></i>
-                <h3>Web Developer</h3>
+                <h3>Web Development</h3>
                 <p>
                     Web design is the art and science of creating visually appealing and user-friendly websites.
-                     Whether for personal portfolios, e-commerce platforms, or corporate websites, web design plays a vital role in establishing credibility, driving engagement, and achieving business goals
+                     Whether for personal portfolios, e-commerce platforms, or corporate websites, web design plays a vital role in establishing credibility, driving engagement, and achieving business goals.
                 </p>
             </div>
             <div class="services-box">
@@ -172,17 +160,17 @@
                  <i class="fa-solid fa-mobile-screen"></i>
                  <h3>Responsive Design</h3>
                  <p>
-                    Responsive design is a web design approach that ensures websites adapt seamlessly to various screen sizes and devices, providing an optimal user experience acress desktops, tablets, and smartphones.
+                    Responsive design is a web design approach that ensures websites adapt seamlessly to various screen sizes and devices, providing an optimal user experience across desktops, tablets, and smartphones.
                  </p>
             </div>
         </div>
     </section>
 
-  <section id="projects">
+    <section id="projects">
         <div class="container">
             <h2 class="section-title">My <span>Projects</span></h2>
             
-             <p class="project-txt">Recent week project</p>
+             <p class="project-txt">Recent work project</p>
             <div class="projects-container">
                 <!-- Project 1 -->
                 <div class="project-card project-featured" data-tech="react featured">
@@ -192,10 +180,10 @@
                     <div class="project-content">
                         <h3 class="project-title">Expense Tracker</h3>  
                         <p class="project-description">
-                            A comprehensive financial management application that helps users track their expenses, visualize spending patterns, and set budget goals. Built with Html, Css and JavaScript for real-time data synchronization.
+                            A comprehensive financial management application that helps users track their expenses, visualize spending patterns, and set budget goals. Built with HTML, CSS and JavaScript for real-time data synchronization.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">CSS Modules</span>
@@ -210,9 +198,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
             </div>
         </div> 
     </section>
@@ -229,52 +214,46 @@
                     <div class="info-box">
                         <i class="fa-solid fa-phone"></i>
                         <h3>Phone</h3>
-                        <p>+ 254_0799914446</p>
+                        <p>+254 0799914446</p>
                     </div>
                     <div class="info-box">
                         <i class="fa-solid fa-envelope"></i>
                         <h3>Email</h3>
                         <p>atkingsclouse@gmail.com</p>
-                        
                     </div>
                     <div class="social-icons">
                         <a href="#"><i class="fa-brands fa-square-facebook"></i></a> 
-                        <a href="#"><i class="fa-brands fa-linkedin" ></i></a>
-                        <a href="https://github.com/"><i class="fa-brands fa-github" ></i></a>
-                
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <div class="file-upload">
                         <label class="file-upload-btn">
                             <input type="file" name="attachment" accept=".pdf, .doc, .docx" style="display: none;">
-
                             <i class="fa-solid fa-paperclip"></i>
-                            Attach Cv
+                            Attach CV
                         </label>
-
                     </div>
-
                 </div>       
-                    <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                         <label for="email">Email:</label>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                         <label for="message">Message:</label>
-                        <textarea name="message" placeholder="Your message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Submit</button>
                 </form>
-
             </div>
-             
-          </div>
     </section>
+    
     <footer class="footer">
-    <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Ian Ma. All rights reserved.</p>
-    </div>
-</footer>
-<script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Ian Ma. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
